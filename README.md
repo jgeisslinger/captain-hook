@@ -1,7 +1,7 @@
 | :zap:        This is stll WIP - Do not use yet   |
 |--------------------------------------------------|
 
-# GitHook App
+# :anchor: GitHook App
  
 GitHook is a simple javascript tool based on node.js to listen for git webhooks and deploy automatically on webserver. You can use this tool maintain your webprojects on a git repo and deploy changes automatically to your development or client servers. 
 

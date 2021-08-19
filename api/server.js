@@ -1,17 +1,31 @@
+/****************************+
+ * 
+ * 
+ * 
+ *****************************/
+
 const express = require('express'); //General API Server
+const helmet = require('helmet'); //Hemlet for Secure Header
+
 
 const app = express();
 
+const ShipRouter = require("./ship");
+
+
 app.use(express.json());
+app.use(hemlet (
+  {
+    hsts: false,
+  }
+));
+
 
 app.get("/", (req, res) => {
-   res.json({ hello: "Walhalla is real" });
+   res.json({ hello: "Aaaaaargh....Captain on board" });
 });
 
-//Launch app
-port = 3000;
+app.use('/api/ship', ShipRouter);
 
-app.listen(port, () => {
-  console.log("Launching App - Checking for Hooks - Aaargh");
-  
-});
+
+module.exports = app;

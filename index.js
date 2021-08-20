@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const server = require('./api/server.js');
 
 //Launch app

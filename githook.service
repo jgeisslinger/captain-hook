@@ -1,0 +1,14 @@
+[Unit]
+Description=Run githook app in background
+[Service]
+# This is your node js app file saved location. It will be executed in background when system startup.
+ExecStart=/var/www/githook/index.js
+Restart=always
+User=nobody
+# For RHEL/Fedora Linux OS uses 'nobody', for Debian/Ubuntu Linux OS uses 'nogroup', 
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/githook
+[Install]
+WantedBy=multi-user.target
